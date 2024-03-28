@@ -18,13 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from testapp import views as testapp_views
 from exam import views as exam_views
-
+from django.urls import include
 
 urlpatterns = [
-    path('test/',exam_views.showTest),
-    path('result/',exam_views.showResult),
-    path('about/',testapp_views.about),
-    path('contact/',testapp_views.showContact),
-    path('',testapp_views.greeting),
+    path('testapp/',include('testapp.urls')),
+    path('exam/',include('exam.urls')),
     path('admin/', admin.site.urls),
 ]
