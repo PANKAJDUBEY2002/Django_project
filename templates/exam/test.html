@@ -1,18 +1,38 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Test Page</title>
+    <link rel="stylesheet" href="{%static 'css/teststyle.css' %}">
   </head>
   <body>
-    <h1>Test Paper</h1>
-    <div>
-      <h2>Who developed C language?</h2>
-      <input type="radio" name="answer">ken thompson<br/>
-      <input type="radio" name="answer">Danis ritchie<br/>
-      <input type="radio" name="answer">Bjarne stroustrup<br/>
-      <input type="radio" name="answer">pankaj dubey<br/>
+    <div class="heading">
+      <h1>Hello, guest</h1>
     </div>
-   <input type="submit">
+
+    <div class="questionblock">
+      <div class="que">
+        <h2>Who developed C language?</h2>
+
+      </div>
+      <div class="options">
+        <input type="radio" name="answer"><span>ken thompson</span>
+      </div>
+      <div class="options">
+        <input type="radio" name="answer"><span>Danis ritchie</span>
+      </div>
+      <div class="options">
+        <input type="radio" name="answer"><span>Bjarne stroustrup</span>
+      </div>
+      <div class="options">
+        <input type="radio" name="answer"><span>Pankaj Dubey<span/>
+      </div>
+
+
+    <div class="submit">
+      <input type="submit">
+    </div>
+     </div>
   </body>
 </html>
