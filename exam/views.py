@@ -7,7 +7,8 @@ def showTest(request):
     b="Danis ritchie"
     c="Bjarne stroustrup"
     d="James gosling"
-    data={'que':que,'a':a,'b':b,'c':c,'d':d}
+    level="Easy"
+    data={'que':que,'a':a,'b':b,'c':c,'d':d,'level':level}
     res=render(request,'exam/test.html',context=data)
     return res
 def showResult(request):

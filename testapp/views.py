@@ -12,5 +12,5 @@ def showContact(request):
     s+="<p>Email: pankaj@gmail.com</p>"
     return HttpResponse(s)
 def about(request):
-    s="<h1>This is an about page</h1>"
-    return HttpResponse(s)
+    msg="This is an about page"
+    return render(request,'testapp/about.html',{'msg':msg})
