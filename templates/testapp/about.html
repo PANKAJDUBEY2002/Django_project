@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+{% load app_tags %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>About Page</title>
   </head>
   <body>
+    {% load app_tags %}
+    {% get_date as today %}
     <h1>{{msg}}</h1>
     <h2>Above heading contains {{msg|wordcount}} words</h2>
+    <h3>Today is {% get_date %}</h3>
+    <h4>Today is {{today | date:"d m y"}}</h4>
   </body>
 </html>
